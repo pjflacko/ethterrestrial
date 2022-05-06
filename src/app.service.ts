@@ -5,7 +5,7 @@ import { SchedulerRegistry } from '@nestjs/schedule';
 import { CronJobs } from './types';
 import { AppConfigService } from './config';
 //import { TwitterService } from './twitter';
-//import { EthereumService } from './ethereum';
+import { EthereumService } from './ethereum';
 
 @Injectable()
 export class AppService {
@@ -17,6 +17,7 @@ export class AppService {
 
   constructor(
     protected readonly configService: AppConfigService,
+    protected readonly ethereumService: EthereumService,
     private readonly _discord: DiscordService,
     private readonly _schedulerRegistry: SchedulerRegistry, //private readonly _twitter: TwitterService, //private readonly _ethereum: EthereumService,
   ) {
@@ -35,5 +36,7 @@ export class AppService {
     this._logger.log(
       `Sales checker cron job started. Cron pattern: ${this.configService.bot.salesCheckCron}`,
     );
+
+    this.ethereumService.writeData(this.configService.collection)
   }
 }

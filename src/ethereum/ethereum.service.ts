@@ -92,4 +92,31 @@ export class EthereumService {
       i++
     }
   }
+
+  public async writeData(c: CollectionConfig): Promise<void> {
+    let i = 1
+    let data = {}
+    while (i < 5000) {
+      const tokenData = await this.getTokenData(String(i), c);
+      if (tokenData != undefined) {
+        try {
+          this._logger.debug(`Recording attrs file ${i}`)
+          for (const attr of tokenData.attributes) {
+            if (!data[attr.trait_type]) {
+              data[attr.trait_type] = {}
+            }
+            if (!data[attr.trait_type][attr.value]) {
+              data[attr.trait_type][attr.value] = 1
+            } else {
+              data[attr.trait_type][attr.value]++
+            }
+          }
+        } catch (err) {
+          this._logger.error(`Couldn't write files ${err}`);
+        }
+      }
+      this._logger.debug(data);
+      i++
+    }
+  }
 }

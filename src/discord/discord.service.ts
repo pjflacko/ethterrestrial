@@ -181,7 +181,7 @@ export class DiscordService {
     return new MessageEmbed()
       .setColor(i.backgroundColor)
       .setAuthor(
-        `${i.name} (#${i.serial})`,
+        `${i.name}`,
         this.configService.bot.salesIcon,
         `${c.openSeaBaseURI}/${i.serial}`,
       )

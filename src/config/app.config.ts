@@ -10,15 +10,15 @@ export default (): AppConfig => ({
     forgottenApi: 'https://mainnet-api-v4.reservoir.tools/sales',
     nftxApi:
       'https://gateway.thegraph.com/api/690cf8d6987a151008c2536454bd3d7a/subgraphs/id/4gZf3atMXjYDh4g48Zr83NFX3rkvZED86VqMNhgEXgLc',
-    salesIcon: 'https://cdn.discordapp.com/app-icons/843121928549957683/af28e4f65099eadebbb0635b1ea8d0b2.png?size=64',
+    salesIcon: 'https://raw.githubusercontent.com/ajcrowe/ethterrestrial/master/assets/img/bot.png',
   },
   collection: {
     tokenContract: '0xd65c5d035a35f41f31570887e3ddf8c3289eb920',
     tokenAbi: 'abis/ethterrestrials.json',
-    nftxVaultContract: '0x87931e7ad81914e7898d07c68f145fc0a553d8fb',
+    nftxVaultContract: '',
     openSeaSlug: 'ethterrestrials',
     dataURI:
-      'https://cloudflare-ipfs.com/ipfs/QmfUgAKioFE8taS41a2XEjYFrkbfpVyXYRt7c6iqTZVy9G',
+      '',
     imageURI:
       'https://raw.githubusercontent.com/ajcrowe/ethterrestrial/master/assets/img',
     openSeaBaseURI:
