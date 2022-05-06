@@ -20,7 +20,7 @@ export default (): AppConfig => ({
     dataURI:
       'https://cloudflare-ipfs.com/ipfs/QmfUgAKioFE8taS41a2XEjYFrkbfpVyXYRt7c6iqTZVy9G',
     imageURI:
-      'https://cloudflare-ipfs.com/ipfs/QmbtiPZfgUzHd79T1aPcL9yZnhGFmzwar7h4vmfV6rV8Kq',
+      'https://raw.githubusercontent.com/ajcrowe/ethterrestrial/master/assets/img',
     openSeaBaseURI:
       'https://opensea.io/assets/0xd65c5d035a35f41f31570887e3ddf8c3289eb920',
   },

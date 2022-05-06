@@ -51,9 +51,9 @@ export class DiscordService {
    */
   public async checkSales(cs: CollectionConfig[]): Promise<void> {
     for (const c of cs) {
-      await this.etherService.writeImages(c);
-      //await this.postSales(await this.openSeaMarket.getSales(c));
-      //await this.postSales(await this.looksRareMarket.getSales(c));
+      //await this.etherService.writeImages(c);
+      await this.postSales(await this.openSeaMarket.getSales(c));
+      await this.postSales(await this.looksRareMarket.getSales(c));
     }
   }
 

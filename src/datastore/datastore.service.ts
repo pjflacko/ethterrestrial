@@ -36,7 +36,7 @@ export class DataStoreService {
         name: json.name,
         backgroundColor: '000000',
         traits: traits,
-        image: json.image,
+        image: `${this.configService.collection.imageURI}/${id}.svg`,
       };
     } catch (err) {
       this._logger.error(err);
